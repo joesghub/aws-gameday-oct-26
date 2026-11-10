@@ -30,7 +30,7 @@ Everything below exists to close those two gaps. The useful mental habit: for ea
 ask *"what would break if this didn't exist?"*
 
 
-[Agentic Investigation System Architecture](./img/Agentic Investigation System Architecture.png)
+![Agentic Investigation System Architecture](./img/diagram.png)
 
 
 ## 2. Each component as the answer to a specific need
