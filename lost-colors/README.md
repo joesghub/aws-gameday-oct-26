@@ -168,6 +168,13 @@ caller → invoke(prompt + images + documents)
 The key insight: **the agent only ever knows one endpoint (the gateway) and one identity.** All the
 heterogeneity of the tools (different hosts, protocols, credentials) is absorbed by the gateway.
 
+![Lost Colors Quest](./img/01_Lost_Colors.png)
+![Lost Colors Quest](./img/02_chat_interface.png)
+![Lost Colors Quest](./img/03_quest_start.png)
+![Lost Colors Quest](./img/04_first_clue.png)
+![Lost Colors Quest](./img/05_second_clue.png)
+![Lost Colors Quest](./img/06_second_clue.png)
+![Lost Colors Quest](./img/07_second_clue.png)
 
 
 ## 5. The bugs (one theme, four faces)
