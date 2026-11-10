@@ -31,6 +31,9 @@ The agent was designed to analyze evidence, access location information, and que
 
 **[Explore Lost Colors →](./lost-colors/README.md)**
 
+![Lost Colors Quest](./lost-colors/img/01_Lost_Colors.png)
+![Lost Colors Chat](./lost-colors/img/02_chat_interface.png)
+
 ### 2. AI Battle Arena
 **Focus: Agent Behavior & Decision-Making**
 
