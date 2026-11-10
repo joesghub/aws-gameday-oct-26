@@ -29,6 +29,8 @@ pool IDs, and secrets are replaced with placeholders.
 ```
 
 
+![Agentic Investigation System Architecture](./img/diagram.png)
+
 
 ## The two authentication hops
 
