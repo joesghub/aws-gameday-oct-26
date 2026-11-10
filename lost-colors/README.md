@@ -1,12 +1,5 @@
 # Building an Agentic Investigation System on Amazon Bedrock AgentCore
 
-> A teaching write-up for my future self. It explains **why** each AWS service is needed
-> (not just how it was wired), and tells the **sequential story** of how an agent and its
-> supporting infrastructure come together. Built during an AWS GameDay quest ("The Legend
-> of Lost Colors"), but the architecture is a real, general pattern for production agents.
-
-
-
 ## 0. The 30-second version
 
 I built an AI agent that can analyze images/documents and answer investigation questions by
