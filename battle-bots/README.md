@@ -5,7 +5,7 @@
 > make an LLM reliably do the right thing. Each level of the AI Battle Arena isolates one core
 > principle of agent design. All six completed (30,000 pts).
 
----
+
 
 ## 0. The 30-second version
 
@@ -18,7 +18,7 @@ it has **memory**. The six battles each force one of these lessons by designing 
 Context → Tools → Cost → Multi-agent → Memory → (Capstone: all at once)
 ```
 
----
+
 
 ## 1. The core idea the whole arena teaches
 
@@ -42,7 +42,7 @@ FALLBACK:    always a legal move; conserve resources when stuck
 COST:        match model + reasoning effort to task; minimize output tokens
 ```
 
----
+
 
 ## 2. The six lessons
 
@@ -108,12 +108,12 @@ quick_strike), specialist executes with minimal thinking; round-trips minimized 
 **Transfer:** production agents juggle context, tools, cost, structure, and memory simultaneously —
 and the right model choice is per-role, not one-size-fits-all.
 
----
+
 
 ## 3. The through-line to real agent engineering
 
 | Arena lesson | Real-world equivalent |
-|---|---|
+|||
 | Context | Prompt/context engineering; put domain knowledge in the prompt |
 | Tools | Tool/function calling; capability = what you attach, used *when* instructed |
 | Cost | Token economics; right-size model + reasoning effort |
@@ -128,7 +128,7 @@ Both quests taught the **same meta-lesson from two angles**:
 Capability is something you **provide**, deliberately — in the prompt, in the tool config, in the
 architecture, in the memory, in the model choice. That's the job.
 
----
+
 
 ## 4. Habits to keep
 
