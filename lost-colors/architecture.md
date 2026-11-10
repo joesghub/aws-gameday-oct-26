@@ -3,7 +3,7 @@
 A sanitized reference for the system built in the "Lost Colors" quest. All account IDs,
 pool IDs, and secrets are replaced with placeholders.
 
----
+
 
 ## Component overview
 
@@ -28,7 +28,7 @@ pool IDs, and secrets are replaced with placeholders.
                         └────────────────┘        └──────────────────────────────────┘
 ```
 
----
+
 
 ## The two authentication hops
 
@@ -48,12 +48,12 @@ JWT ──▶ (receiver verifies signature via the pool's discovery URL)
 - The gateway's **inbound** authorizer (CUSTOM_JWT) verifies hop-1 tokens from the agent-to-gateway pool.
 - Each MCP tool runtime's authorizer verifies hop-2 tokens from the gateway-to-runtime pool.
 
----
+
 
 ## Target types and their auth
 
 | Tool              | Backend                    | Target config              | Outbound auth        |
-|-------------------|----------------------------|----------------------------|----------------------|
+|-|-|-|-|
 | BDA               | AgentCore MCP runtime      | `mcp.mcpServer.endpoint`   | OAUTH (gw-to-runtime)|
 | Location Service  | AgentCore MCP runtime      | `mcp.mcpServer.endpoint`   | OAUTH (gw-to-runtime)|
 | Flight data       | Lambda function            | `mcp.lambda` + tool schema | GATEWAY_IAM_ROLE     |
@@ -66,7 +66,7 @@ JWT ──▶ (receiver verifies signature via the pool's discovery URL)
   The tool `name` must match the branch in the Lambda handler (`get_flights`), and the Lambda
   reads the invoked tool from `context.client_context.custom['bedrockAgentCoreToolName']`.
 
----
+
 
 ## Illustrative: creating the OAuth2 credential provider (sanitized)
 
@@ -113,7 +113,7 @@ targetConfiguration={
 credentialProviderConfigurations=[{"credentialProviderType": "GATEWAY_IAM_ROLE"}]
 ```
 
----
+
 
 ## Deploy pipeline (what `agentcore deploy` does)
 
