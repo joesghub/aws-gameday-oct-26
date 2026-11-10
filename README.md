@@ -2,6 +2,8 @@
 
 Exploring the infrastructure, architecture, and decision-making principles behind effective AI agents through two hands-on AWS GameDay activities.
 
+![Agentic Investigation System Architecture](./lost-colors/img/aws_gameday.jpeg)
+
 ## Overview
 
 This GameDay explored two complementary aspects of agentic AI development:
