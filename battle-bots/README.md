@@ -11,7 +11,7 @@ it has **memory**. The six battles each force one of these lessons by designing 
 Context → Tools → Cost → Multi-agent → Memory → (Capstone: all at once)
 ```
 
-![Battle Bots](./img/04.png)
+![Battle Bots](./img/05.png)
 
 
 ## 1. The core idea the whole arena teaches
