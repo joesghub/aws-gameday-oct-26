@@ -11,6 +11,7 @@ it has **memory**. The six battles each force one of these lessons by designing 
 Context → Tools → Cost → Multi-agent → Memory → (Capstone: all at once)
 ```
 
+![Battle Bots](./img/04.png)
 
 
 ## 1. The core idea the whole arena teaches
@@ -49,6 +50,8 @@ move it defends).
 **Transfer:** prompts should encode the actual decision rules and domain facts — not hope the model
 infers them.
 
+![Battle Bots](./img/01.png)
+
 ### Level 2 — Eyes Open (**Tool Use**)
 **Opponent:** Shapeshifter — hidden stance that changes every turn; only one attack lands.
 **Lesson:** Tools let an agent **observe what it cannot infer**. An agent only has the tools you give
@@ -59,6 +62,8 @@ it. The prompt should say **when** to use a tool, not just that it exists.
 move."
 **Transfer:** capability lives in configuration, not wishful prompt text. (Same lesson as Lost Colors:
 *an agent only has the tools you give it.*)
+
+![Battle Bots](./img/02.png)
 
 ### Level 3 — Running on Empty (**Cost**)
 **Opponent:** Siege Tower — beatable only within a tight energy budget; every *thinking token* costs energy.
@@ -101,7 +106,7 @@ quick_strike), specialist executes with minimal thinking; round-trips minimized 
 **Transfer:** production agents juggle context, tools, cost, structure, and memory simultaneously —
 and the right model choice is per-role, not one-size-fits-all.
 
-
+![Battle Bots](./img/03.png)
 
 ## 3. The through-line to real agent engineering
 
