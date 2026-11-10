@@ -5,7 +5,7 @@
 > supporting infrastructure come together. Built during an AWS GameDay quest ("The Legend
 > of Lost Colors"), but the architecture is a real, general pattern for production agents.
 
----
+
 
 ## 0. The 30-second version
 
@@ -20,7 +20,7 @@ those as four building blocks: **Runtime, Identity, Gateway, and tool targets**,
 Runtime (where it runs) + Identity (who it is) + Gateway (one door to tools) + Tools (what it can do)
 ```
 
----
+
 
 ## 1. The goal, and why a plain LLM can't meet it
 
@@ -36,7 +36,7 @@ A raw LLM has two hard limits for this:
 Everything below exists to close those two gaps. The useful mental habit: for each component,
 ask *"what would break if this didn't exist?"*
 
----
+
 
 ## 2. Each component as the answer to a specific need
 
@@ -115,7 +115,7 @@ Three tools, attached to the gateway as **targets**:
 story as the agent). The third is a plain **Lambda** fronting **DynamoDB** — showing the gateway can
 expose *existing* AWS resources as agent tools, not just MCP servers.
 
----
+
 
 ## 3. The sequential story — why the order is forced
 
@@ -154,7 +154,7 @@ the agent is actually useful.*
   **OAUTH** for the MCP servers via `gateway-to-runtime` identity, **GATEWAY_IAM_ROLE** for the
   Lambda). Two independent trust boundaries, each with its own Cognito pool.
 
----
+
 
 ## 4. How the pieces talk at request time (the runtime story)
 
@@ -173,7 +173,7 @@ caller → invoke(prompt + images + documents)
 The key insight: **the agent only ever knows one endpoint (the gateway) and one identity.** All the
 heterogeneity of the tools (different hosts, protocols, credentials) is absorbed by the gateway.
 
----
+
 
 ## 5. The bugs (one theme, four faces)
 
@@ -182,7 +182,7 @@ reaching `READY` only means the container *deployed* — not that the app *runs*
 surfaced only when code actually executed.
 
 | # | Where | Error | Cause | Fix |
-|---|-------|-------|-------|-----|
+||-|-|-|--|
 | 1 | Agent (MCP client import) | `cannot import name 'streamablehttp_client'` | 2.x renamed the symbol | import new name / pin <2 |
 | 2 | BDA server | `No module named 'mcp.server.fastmcp'` | 2.x removed `FastMCP` (→`MCPServer`) | pin `mcp[cli]>=1.11.0,<2` |
 | 3 | Location server | same as #2 | same | same pin |
@@ -197,7 +197,7 @@ surfaced only when code actually executed.
 - **Gateway target FAILED** for BDA on first attempt — because the *backend runtime* was still
   crashing (bug #2). A failing target often points one layer down, at a broken backend.
 
----
+
 
 ## 6. Lessons to carry forward
 
@@ -213,12 +213,12 @@ surfaced only when code actually executed.
   Bedrock=brain, Strands=the loop. If you can state the *need* each service answers, you understand
   the architecture.
 
----
+
 
 ## 7. AWS services used, at a glance
 
 | Service | Role here | The general thing it does |
-|---|---|---|
+||||
 | Bedrock AgentCore Runtime | hosts the agent + MCP tool servers | serverless, isolated agent/container hosting |
 | Bedrock (model) | the reasoning model (Claude) | managed foundation-model inference |
 | Bedrock AgentCore Identity | OAuth2 credential providers | lets agents obtain/verify tokens |
@@ -230,7 +230,7 @@ surfaced only when code actually executed.
 | IAM | execution roles & permissions | who-can-do-what |
 | ECR / CloudFormation / CDK | build & deploy pipeline | image registry + infra-as-code |
 
----
+
 
 ## 8. Final deliverables (verified `READY`)
 
