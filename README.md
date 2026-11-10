@@ -52,6 +52,8 @@ The challenges explored how agent performance changes based on available informa
 
 **[Explore AI Battle Arena →](./battle-bots/README.md)**
 
+![Battle Bot Arena](./battle-bots/img/05.png)
+
 ## Connecting the Lessons
 
 Although the activities approached agent development differently, they reinforced the same underlying engineering principles.
