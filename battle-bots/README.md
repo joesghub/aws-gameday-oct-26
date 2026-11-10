@@ -1,12 +1,5 @@
 # AI Battle Arena — Six Lessons in Building Effective Agents
 
-> A teaching write-up for my future self, companion to the Lost Colors build. Where Lost Colors
-> was about the **infrastructure** of an agent, this is about the **behavior** of an agent: how to
-> make an LLM reliably do the right thing. Each level of the AI Battle Arena isolates one core
-> principle of agent design. All six completed (30,000 pts).
-
-
-
 ## 0. The 30-second version
 
 A capable model is not enough. An agent only acts on the **context** you give it, the **tools** you
